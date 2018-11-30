@@ -1,0 +1,8 @@
+prefix=/home/nikisub/Documents/MARS-Programming-Autonomy/install
+
+Name: talon-srx-driver
+Description: Description of talon-srx-driver
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/nikisub/Documents/MARS-Programming-Autonomy/install/lib 
+Requires: 

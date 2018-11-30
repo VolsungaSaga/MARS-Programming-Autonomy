@@ -1,0 +1,8 @@
+prefix=/home/nikisub/Documents/MARS-Programming-Autonomy/devel
+
+Name: beacon-finder
+Description: Description of beacon-finder
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/nikisub/Documents/MARS-Programming-Autonomy/devel/lib 
+Requires: 

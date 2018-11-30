@@ -1,0 +1,8 @@
+prefix=/home/nikisub/Documents/MARS-Programming-Autonomy/devel
+
+Name: lidar_kalman_filter
+Description: Description of lidar_kalman_filter
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/nikisub/Documents/MARS-Programming-Autonomy/devel/lib 
+Requires: 
