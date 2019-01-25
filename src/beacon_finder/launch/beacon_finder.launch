@@ -1,0 +1,17 @@
+<launch>
+
+  <arg name="camera_left_name" default="/taraxl/left" />
+  <arg name="camera_right_name" default="/taraxl/left"/>
+  <arg name="camera_frame" default="camera" />
+  <arg name="image_topic" default="image_rect" />
+
+
+  <node pkg="beacon_finder" type="camera_info_publisher" output="screen">
+
+	
+
+  </node>
+
+
+
+</launch>
