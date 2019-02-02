@@ -1,8 +1,0 @@
-prefix=/home/nikisub/Documents/MARS-Programming-Autonomy/devel
-
-Name: slam-mapper
-Description: Description of slam-mapper
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/nikisub/Documents/MARS-Programming-Autonomy/devel/lib 
-Requires: 

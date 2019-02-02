@@ -1,8 +1,0 @@
-prefix=/home/nikisub/Documents/MARS-Programming-Autonomy/install
-
-Name: gamepad-state-interpreter
-Description: Description of gamepad-state-interpreter
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/nikisub/Documents/MARS-Programming-Autonomy/install/lib 
-Requires: 

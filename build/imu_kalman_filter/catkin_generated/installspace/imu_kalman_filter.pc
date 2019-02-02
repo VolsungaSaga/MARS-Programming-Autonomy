@@ -1,8 +1,0 @@
-prefix=/home/nikisub/Documents/MARS-Programming-Autonomy/install
-
-Name: imu_kalman_filter
-Description: Description of imu_kalman_filter
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/nikisub/Documents/MARS-Programming-Autonomy/install/lib 
-Requires: 

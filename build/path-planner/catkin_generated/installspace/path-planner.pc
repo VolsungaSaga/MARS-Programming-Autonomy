@@ -1,8 +1,0 @@
-prefix=/home/nikisub/Documents/MARS-Programming-Autonomy/install
-
-Name: path-planner
-Description: Description of path-planner
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/nikisub/Documents/MARS-Programming-Autonomy/install/lib 
-Requires: 

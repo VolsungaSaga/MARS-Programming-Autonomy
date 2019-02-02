@@ -1,2 +1,0 @@
-beacon-finder:gamepad-state-interpreter:imu_kalman_filter:lidar_kalman_filter:move-cmd-interpreter:path-planner:slam-mapper:talon-srx-driver
--DCATKIN_DEVEL_PREFIX=/home/nikisub/Documents/MARS-Programming-Autonomy/devel -DCMAKE_INSTALL_PREFIX=/home/nikisub/Documents/MARS-Programming-Autonomy/install -G Unix Makefiles
