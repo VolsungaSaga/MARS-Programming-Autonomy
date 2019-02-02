@@ -1,0 +1,9 @@
+[submodule "src/apriltags2_ros"]
+	path = src/apriltags2_ros
+	url = https://github.com/hanzhi713/apriltags2_ros
+[submodule "src/taraxl-ros-package"]
+	path = src/taraxl-ros-package
+	url = https://github.com/hanzhi713/taraxl-ros-package
+[submodule "src/vision_opencv"]
+	path = src/vision_opencv
+	url = https://github.com/hanzhi713/vision_opencv
