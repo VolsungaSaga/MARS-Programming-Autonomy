@@ -14,6 +14,7 @@ import sys
 
 
 while not rospy.is_shutdown():
+	pass
 	#Convert the image to opencv image
 
 	#Apply Gaussian filter
