@@ -13,6 +13,8 @@ import sys
 
 
 
+rospy.init_node("filter_tara_depth")
+
 while not rospy.is_shutdown():
 	#Convert the image to opencv image
 
