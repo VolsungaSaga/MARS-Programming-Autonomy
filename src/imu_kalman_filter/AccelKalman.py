@@ -17,7 +17,7 @@ C[0][0],C[1][0],C[2][0],C[3][1],C[4][1],C[5][1],C[6][2],C[7][2],C[8][2] = 1,1,1,
 z = np.array([imuOne[0],imuTwo[0],imuThree[0],imuOne[1],imuTwo[1],imuThree[1],imuOne[2],imuTwo[2],imuThree[2]]).transpose()
 
 
-pubX = rospy.Publisher('LinAccelX', Float64, queue_size=10)
+pubX = rospy.Publisher('LinAccelX', Float64, queue_size=10Z)
 pubY = rospy.Publisher('LinAccelY', Float64, queue_size=10)
 pubZ = rospy.Publisher('LinAccelZ', Float64, queue_size=10)
 rospy.init_node('talker', anonymous=True)
