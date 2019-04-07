@@ -30,16 +30,16 @@
 # ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 #
-# Revision $Id$
+
 
 ## Simple talker demo that listens to std_msgs/Strings published 
 ## to the 'chatter' topic
 
 import rospy
-from std_msgs.msg import Float64
+from sensor_msgs.msg import Imu
 
 def callback(data):
-    rospy.loginfo(rospy.get_caller_id() + 'I heard %s', data.data)
+    rospy.loginfo(rospy.get_caller_id() + 'I heard %s', data.linear_acceleration)
 
 def listener():
 
@@ -50,9 +50,8 @@ def listener():
     # run simultaneously.
     rospy.init_node('listener', anonymous=True)
 
-    rospy.Subscriber('LinAccelX', Float64, callback)
-    rospy.Subscriber('LinAccelY', Float64, callback)
-    rospy.Subscriber('LinAccelZ', Float64, callback)
+    rospy.Subscriber('imu', Imu, callback)
+
 
     # spin() simply keeps python from exiting until this node is stopped
     rospy.spin()
