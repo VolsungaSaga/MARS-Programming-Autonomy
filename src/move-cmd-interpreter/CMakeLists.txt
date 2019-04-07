@@ -118,7 +118,8 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
-# include
+ include
+    
   ${catkin_INCLUDE_DIRS}
 )
 
@@ -199,3 +200,8 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+
+add_executable(vel_to_serial src/vel_to_serial.cpp)
+link_directories(~/MARS-Programming-Autonomy/src/move_cmd_interpreter/lib)
+target_link_libraries(vel_to_serial ${catkin_LIBRARIES} serial)
+
