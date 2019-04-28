@@ -7,7 +7,7 @@ import serial
 
 from geometry_msgs.msg import Pose, Twist
 from std_msgs.msg import UInt8MultiArray #Has a lot of data overhead. Might wanna define our own lightweight version.
-
+from xbox_controller_driver.msg import ControllerState
 
 class SerialSender():
     def __init__(self, port):
@@ -16,12 +16,15 @@ class SerialSender():
         self.usedPort = port
     
         self.talon_cmd_offest = 127     
-        self.gamepadVelCmdSub = rospy.Subscriber("/game_cmd_vel", Twist, self.gameCmdCallback)
+        #self.gamepadVelCmdSub = rospy.Subscriber("/game_cmd_vel", Twist, self.gameCmdCallback)
+
+        self.gamepadStateSub = rospy.Subscriber("/controller", ControllerState, self.gameCmdCallback)
         
         self.autoVelCmdSub = rospy.Subscriber("/auto_cmd_vel", Twist, self.velCmdCallback)
     
            
-
+    def normalize(x, xmin, xmax, a, b):
+        return a + (x - xmin) * (b-a)/(xmax - xmin)
 
     def send_serial_pkg(self,ser, values):
         packet = [255,255] 
@@ -48,7 +51,10 @@ class SerialSender():
     '''
     def gameCmdCallback(self,data):
         #All we do is shove the data through the serial line.
-        self.send_serial_pkg(self.ser, data.data)
+        left_motor = int(self.normalize(data.normalizeLeftY, 0., 1., 0., 100.))
+        right_motor = int(self.normalize(data.normalizeRightY, 0., 1., 0., 100.))
+
+        self.send_serial_pkg(self.ser, [left_motor, right_motor])
         
         
         
@@ -59,12 +65,7 @@ if __name__ == "__main__":
 
     serSender = SerialSender(port)
     while not rospy.is_shutdown():
-        test_pkg = [1, 2]
-        rospy.loginfo("Sending {} on port {}".format(test_pkg, port))
-        serSender.send_serial_pkg(serSender.ser, test_pkg)
-        test_rcv = serSender.read_serial_pkg(serSender.ser, 10)
-        rospy.loginfo("Received: {}".format(test_rcv))
-        break
+        rospy.spin()
         #rospy.spin()
     #Close the serial port after ROS is shut down.    
     serSender.ser.close()
