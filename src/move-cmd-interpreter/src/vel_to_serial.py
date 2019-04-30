@@ -53,8 +53,25 @@ class SerialSender():
         #All we do is shove the data through the serial line.
         left_motor = int(self.normalize(data.normalizeLeftY, 0., 1., 0., 100.))
         right_motor = int(self.normalize(data.normalizeRightY, 0., 1., 0., 100.))
+	
+	'''
+	TODO: Fill these in!
+	A:
+	B:
+	X:
+	Y:
+	Left Bumper:
+	Left Trigger:
+	
+	''' 
+	button_A = int(self.normalize(data.A, 0, 1, 0, 100))
+	button_B = int(self.normalize(data.B, 0, 1, 0, 100))
+	button_X = int(self.normalize(data.X, 0, 1, 0, 100))
+	button_Y = int(self.normalize(data.Y, 0, 1, 0, 100))
 
-        self.send_serial_pkg(self.ser, [left_motor, right_motor])
+	bump_left = int(self.normalize(data.leftBumper, 0, 1, 0, 100))
+	trigger_left = int(self.normalize(data.leftTrigger, 0., 1., 0., 100.))
+        self.send_serial_pkg(self.ser, [left_motor, right_motor, button_A, button_B, button_X, button_Y, bump_left, trigger_left])
         
         
         
@@ -66,7 +83,7 @@ if __name__ == "__main__":
     serSender = SerialSender(port)
     while not rospy.is_shutdown():
         rospy.spin()
-        #rospy.spin()
+
     #Close the serial port after ROS is shut down.    
     serSender.ser.close()
     
