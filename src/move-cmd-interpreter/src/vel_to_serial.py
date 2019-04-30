@@ -46,7 +46,7 @@ class SerialSender():
         #TODO
         pass
     '''
-    This function is meant to take in values from 0 - 100.
+    This function is meant to directly interpret the gamepad state into motor outputs.
     0 is full reverse, 100 is full forward. It will send these values directly on the serial line with only minimal manipulation.
     '''
     def gameCmdCallback(self,data):
