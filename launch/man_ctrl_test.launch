@@ -1,0 +1,7 @@
+<launch>
+
+	
+	<node pkg="move-cmd-interpreter" type="vel_to_serial.py" name="vel2serial"/>
+
+
+</launch>
