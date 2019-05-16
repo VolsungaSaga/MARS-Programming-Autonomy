@@ -1,0 +1,26 @@
+<package format="2">
+  <name>move_cmd_interpreter</name>
+  <version>0.5</version>
+  <description>
+    This package is in charge of converting a controller message / autonomous directive into generic motor command sent over serial.
+  </description>
+  <maintainer email="rtp4qg@virginia.edu">Robert Pierce</maintainer>
+  <license>BSD</license>
+
+
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>roscpp</depend>
+  <depend>rospy</depend>
+  <depend>std_msgs</depend>
+
+  <build_depend>message_generation</build_depend>
+
+  <exec_depend>message_runtime</exec_depend>
+  <exec_depend>rospy</exec_depend>
+
+  <test_depend>python-mock</test_depend>
+
+  <doc_depend>doxygen</doc_depend>
+</package>
