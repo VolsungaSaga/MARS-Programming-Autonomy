@@ -1,6 +1,6 @@
 # MARS-Programming-Autonomy
 
-This repository shall hold the code running on the NVidia Jetson TX2. The purpose of the code will be to perform high-level evaluations of sensory data, updating its conceptions of the environment around it, planning a trajectory to achieve a goal, and sending commands to the Arduinos to interpret. This will be a catkin workspace, with ROS functioning as the middleware tying all the scripts we write together into a cohesive whole.
+This repository shall hold the code running on the NVidia Jetson TX2. The purpose of the code will be to perform high-level evaluations of sensory data, updating its conceptions of the environment around it, planning a trajectory to achieve a goal, and sending commands to the HERO Development Board for further interpretation and transmission to the Talon SRXs. This will be a catkin workspace, with ROS functioning as the middleware tying all the scripts we write together into a cohesive whole.
 
 ## Clone or pull from this repository
 
